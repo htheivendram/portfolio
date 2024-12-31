@@ -106,7 +106,7 @@ section{
     display: flex;
     align-items: center;
     padding: 10 9%;
-    background-image: url("C:/Users/slkai/Desktop/Portfolio%20BTS/assets/pj/home-bg.png");
+    background-image: url("/assets/pj/home-bg.png");
     background-size: cover;
     background-position: center;
 }
