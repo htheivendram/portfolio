@@ -106,7 +106,7 @@ section{
     display: flex;
     align-items: center;
     padding: 10 9%;
-    background-image: url("/assets/pj/home-bg.png");
+    background-image: url("/assets/pj/img/home-bg.png");
     background-size: cover;
     background-position: center;
 }
@@ -363,6 +363,7 @@ section{
 .scolaire-content .content a {
     color: var(--main-color);
     font-style: italic;
+    font-size: 1.3rem;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -443,131 +444,123 @@ section{
 /* experiences section */
 .experiences {
     background: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.experiences .timeline {
-    position: relative;
+.experiences .experiences-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
-.experiences .timeline::after {
+.experiences-row .experiences-column {
+    flex: 1 1 40rem;
+}
+
+.experiences-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.experiences-column .title i {
+    padding-left: .5rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.experiences-column .experiences-box {
+    border-left: .2rem solid var(--main-color);
+}
+
+.experiences-box .experiences-content {
+    position: relative;
+    padding-left: 2rem;
+    background: transparent;
+}
+
+.experiences-box .experiences-content::before {
     content: '';
     position: absolute;
-    width: 6px;
-    background: var(--second-color);
     top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    z-index: -2px;
-}
-
-.experiences .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.experiences .container::after {
-    content : '\f501';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    right: -17px;
-    background-color: rgb(252, 252, 252);
-    border: 4px solid var(--main-color);
-    top: 15px;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
     border-radius: 50%;
-    z-index: 100;
-    font-size: 1.89rem;
-    text-align: center;
-    font-weight: 600;
-    font-family: "Font Awesome\ 5 Free";
-    color :var(--main-color);
 }
 
-.experiences .left {
-    left: 0;
-}
-
-.experiences .right {
-    left: 50%;
-}
-
-.experiences .left::before {
-    content: '';
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid var(--main-color);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--main-color);
-}
-
-.experiences .right::before {
-    content: '';
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 560px;
-    border: medium solid var(--main-color);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--main-color) transparent transparent ;
-}
-
-.experiences .right::after {
-    left: -16px;
-}
-
-.experiences .content {
-    background: var(--main-color);
+.experiences-content .content {
     position: relative;
-    border-radius: 6px;
-}
-
-.experiences .content .tag {
-    font-size: 1.5rem;
-    padding-top: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-.experiences .content .decs {
-    margin-left: 1.5rem;
-    padding-bottom: 1rem;
-}
-
-.experiences .content .tag h2 {
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.experiences .content .tag h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #000000;
-}
-
-.rapport {
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow : hidden;
+    z-index: 0;
     color: white;
-    text-align: right;
-    margin-top: -30px;
+    background: transparent;
 }
 
-.social-icons a:hover{
-    color: white;
-    transform: scale(1.3) translateY(-5px);
-    background: var(--main-color);
-    box-shadow: 0  0 25px var(--main-color);
+.experiences-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: width 0.5s;
 }
 
+.experiences-content .content:hover::before {
+    width: 100%;
+}
+
+.experiences-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+
+}
+
+.experiences-content .content .rapport {
+    float: right;
+}
+
+.experiences-content .content .year i {
+    padding-right: .5rem;
+}
+
+.experiences-content .content h3 {
+    font-size: 2rem;
+}
+
+.experiences-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+    text-align: justify;
+}
+
+.experiences-content .content ul {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+    padding-left: 3rem;
+}
+
+.experiences-content .content a {
+    color: var(--main-color);
+    font-style: italic;
+}
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
