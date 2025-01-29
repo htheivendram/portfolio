@@ -439,8 +439,84 @@ section{
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* certification section */
-.certifications {
-    background: var(--bg-color);
+#certifications {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+/* Boîte pour chaque catégorie (RGPD, Cisco, etc.) */
+.category-box {
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0px 4px 8px var(--main-color);
+    overflow: hidden;
+}
+
+/* Titre de chaque catégorie */
+.category-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour les PDF */
+.pdf-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Hauteur fixe pour la boîte */
+}
+
+/* Chaque PDF sera une "slide" */
+.pdf-item {
+    min-width: 50%; /* Chaque PDF prend 100% de la largeur du conteneur */
+    margin-right: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out; /* Effet de transition pour le défilement */
+}
+
+/* Animation pour le défilement des PDF */
+@keyframes defilement {
+    0% {
+        transform: translateX(0); /* Premier PDF visible */
+    }
+    20% {
+        transform: translateX(0); /* Reste au premier PDF */
+    }
+    40% {
+        transform: translateX(-100%); /* Défile le premier PDF */
+    }
+    60% {
+        transform: translateX(-100%); /* Reste au deuxième PDF */
+    }
+    80% {
+        transform: translateX(-200%); /* Défile le deuxième PDF */
+    }
+    100% {
+        transform: translateX(-200%); /* Reste au troisième PDF */
+    }
+}
+
+/* Appliquer l'animation à .pdf-slider */
+.pdf-slider {
+    animation: defilement 30s infinite; /* 30s pour faire défiler les PDF, ajustez selon vos besoins */
+}
+
+/* Style pour l'élément embed PDF pour qu'il occupe tout l'espace */
+embed {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -647,9 +723,12 @@ section{
 }
 
 /* Icône PDF */
-.projet-box ul li a i {
+.projet-box ul li a  {
     font-size: 2rem; /* Taille de l'icône PDF */
     margin-left: 10px;
+}
+.projet-box a {
+    font-size: 3rem;
 }
 
 .projet-box p {
