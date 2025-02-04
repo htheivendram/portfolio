@@ -244,7 +244,7 @@
                 </div>
                 <h3>Outils</h3>
                 <ul>
-                    <li>Supervision : Zabbix, Nagios, Snort</li>
+                    <li>Supervision : Zabbix, Prometheus, Snort</li>
                     <li>Analyse réseau : Wireshark, Nmap</li>
                     <li>Scan de failles : Nessus, Metasploit</li>
                     <li>Protection de serveurs : Fail2Ban</li>
@@ -281,52 +281,32 @@
 <!-----------CERTIIFICATIONS---------------------------------------------------------------->
     <section class="certifications" id="certifications">
         <h2 class="heading">CERTIFICATIONS</h2>
+        <div class="filter-menu">
+            <button class="filter-btn" data-category="linux">LINUX</button>
+            <button class="filter-btn" data-category="cisco">CISCO</button>
+            <button class="filter-btn" data-category="mooc-anssi">MOOC ANSSI</button>
+            <button class="filter-btn" data-category="mooc-rgpd">MOOC RGPD CNIL</button>
+            <button class="filter-btn" data-category="sololearn">SOLOLEARN</button>
+            <button class="filter-btn" data-category="google">GOOGLE</button>
+        </div>
 
-    <!-- Boîte RGPD -->
-    <div class="category-box">
-        <h2 class="category-title">RGPD</h2>
-        <div class="pdf-slider">
-            <div class="pdf-item">
-                <embed src="rgpd1.pdf" type="application/pdf" width="50%" height="50%" />
+        <div class="certification-grid">
+            <div class="certification-item mooc-rgpd">
+                <img src="assets/pj/certif/mod1-rgpd.png" alt="RGPD 1">
             </div>
-            <div class="pdf-item">
-                <embed src="rgpd2.pdf" type="application/pdf" width="100%" height="100%" />
+            <div class="certification-item mooc-rgpd">
+                <img src="assets/pj/certif/mod2-rgpd.png" alt="RGPD 1">
             </div>
-            <div class="pdf-item">
-                <embed src="rgpd3.pdf" type="application/pdf" width="100%" height="100%" />
+            <div class="certification-item mooc-rgpd">
+                <img src="assets/pj/certif/mod3-rgpd.png" alt="RGPD 1">
             </div>
-            <div class="pdf-item">
-                <embed src="rgpd4.pdf" type="application/pdf" width="100%" height="100%" />
+            <div class="certification-item mooc-rgpd">
+                <img src="assets/pj/certif/mod4-rgpd.png" alt="RGPD 1">
             </div>
-            <div class="pdf-item">
-                <embed src="rgpd5.pdf" type="application/pdf" width="100%" height="100%" />
+            <div class="certification-item mooc-rgpd">
+                <img src="assets/pj/certif/mod5-rgpd.png" alt="RGPD 1">
             </div>
         </div>
-    </div>
-
-    <!-- Boîte Cisco -->
-    <div class="category-box">
-        <h2 class="category-title">Cisco</h2>
-        <div class="pdf-slider">
-            <div class="pdf-item">
-                <embed src="cisco1.pdf" type="application/pdf" width="100%" height="100%" />
-            </div>
-            <div class="pdf-item">
-                <embed src="cisco2.pdf" type="application/pdf" width="100%" height="100%" />
-            </div>
-            <div class="pdf-item">
-                <embed src="cisco3.pdf" type="application/pdf" width="100%" height="100%" />
-            </div>
-            <div class="pdf-item">
-                <embed src="cisco4.pdf" type="application/pdf" width="100%" height="100%" />
-            </div>
-            <div class="pdf-item">
-                <embed src="cisco5.pdf" type="application/pdf" width="100%" height="100%" />
-            </div>
-        </div>
-    </div>
-
-
     </section>
 
 
@@ -590,6 +570,7 @@
         </p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js" defer></script>
 </body>
 </html>

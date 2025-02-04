@@ -444,81 +444,61 @@ section{
     background-color: var(--bg-color);
 }
 
-/* Boîte pour chaque catégorie (RGPD, Cisco, etc.) */
-.category-box {
-    background-color: var(--second-bg-color);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    box-shadow: 0px 4px 8px var(--main-color);
-    overflow: hidden;
-}
-
-/* Titre de chaque catégorie */
-.category-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--main-color);
+/* Menu de filtre */
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
+    margin-top: -20px;
 }
 
-/* Conteneur pour les PDF */
-.pdf-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.filter-btn {
+    background: var(--second-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--main-color);
+    font-weight: bold;
+}
+
+.filter-btn:hover {
+    background: var(--main-color);
+}
+
+/* Grille des certifications */
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+/* Cartes de certification */
+.certification-item {
     position: relative;
+    border-radius: 10px;
+    padding: 5px;
     overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.certification-item:hover {
+    transform: scale(1.05);
+}
+
+.certification-item img {
     width: 100%;
-    height: 300px; /* Hauteur fixe pour la boîte */
+    border-radius: 10px;
 }
-
-/* Chaque PDF sera une "slide" */
-.pdf-item {
-    min-width: 50%; /* Chaque PDF prend 100% de la largeur du conteneur */
-    margin-right: 80px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1s ease-in-out; /* Effet de transition pour le défilement */
-}
-
-/* Animation pour le défilement des PDF */
-@keyframes defilement {
-    0% {
-        transform: translateX(0); /* Premier PDF visible */
-    }
-    20% {
-        transform: translateX(0); /* Reste au premier PDF */
-    }
-    40% {
-        transform: translateX(-100%); /* Défile le premier PDF */
-    }
-    60% {
-        transform: translateX(-100%); /* Reste au deuxième PDF */
-    }
-    80% {
-        transform: translateX(-200%); /* Défile le deuxième PDF */
-    }
-    100% {
-        transform: translateX(-200%); /* Reste au troisième PDF */
-    }
-}
-
-/* Appliquer l'animation à .pdf-slider */
-.pdf-slider {
-    animation: defilement 30s infinite; /* 30s pour faire défiler les PDF, ajustez selon vos besoins */
-}
-
-/* Style pour l'élément embed PDF pour qu'il occupe tout l'espace */
-embed {
-    width: 100%;
-    height: 100%;
-}
-
 
 
 
