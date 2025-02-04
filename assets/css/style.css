@@ -607,8 +607,8 @@ section{
     font-size: 1.8rem;
 }
 
-.experiences-content .content p {
-    font-size: 1.6rem;
+.experiences-content .content .rapport p {
+    font-size: 1.5rem;
     padding-top: .5rem;
     text-align: justify;
 }
