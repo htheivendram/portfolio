@@ -38,38 +38,3 @@ windows.onscroll = () => {
 
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const certificationItems = document.querySelectorAll(".certification-item");
-
-    // Filtrage des certifications
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            document.querySelector(".filter-btn.active").classList.remove("active");
-            this.classList.add("active");
-
-            const category = this.getAttribute("data-category");
-
-            certificationItems.forEach(item => {
-                if (category === "all" || item.classList.contains(category)) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        });
-    });
-
-    // Action pour les boutons "Détails" et "Ouvrir en PDF"
-    document.querySelectorAll(".detail-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            alert("Détails non disponibles pour le moment !");
-        });
-    });
-
-    document.querySelectorAll(".download-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            alert("Téléchargement non disponible !");
-        });
-    });
-});

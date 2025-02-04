@@ -438,68 +438,69 @@ section{
 
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* certification section */
+/* Certification section */
 #certifications {
     width: 100%;
     background-color: var(--bg-color);
 }
 
-/* Menu de filtre */
-.filter-menu {
+/* Ajout d'un fond pour chaque groupe de certifications */
+.certification-grid-wrapper {
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px var(--main-color);
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    margin-top: -20px;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu */
 }
 
-.filter-btn {
-    background: var(--second-color);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.filter-btn.active {
-    background: var(--main-color);
-    font-weight: bold;
-}
-
-.filter-btn:hover {
-    background: var(--main-color);
-}
-
-/* Grille des certifications */
+/* Style de la grille */
 .certification-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /* Assurer un minimum de 330px */
+    gap: 10px; /* Augmenter l'espacement entre les images */
     justify-items: center;
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 1200px; /* Empêcher la grille d'être trop large */
 }
 
-/* Cartes de certification */
+/* Centrer le titre dans la boîte */
+.certification-grid h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-align: center;
+    grid-column: 1 / -1; /* Le titre prend toute la largeur de la grille */
+}
+
+/* Style des certifications */
 .certification-item {
     position: relative;
     border-radius: 10px;
-    padding: 5px;
-    overflow: hidden;
-    transition: transform 0.3s;
+    padding: 10px;
+    overflow: visible; /* Permet à l'image de dépasser */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.certification-item:hover {
-    transform: scale(1.05);
-}
-
+/* Effet d'agrandissement de l'image */
 .certification-item img {
-    width: 100%;
+    width: 370px;
+    height: auto;
     border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 
+/* Survol : l'image devient énorme et déborde */
+.certification-item:hover img {
+    transform: scale(2.5); /* L'image s'agrandit et dépasse */
+    position: absolute; /* Permet de dépasser son conteneur */
+    z-index: 10; /* La met au premier plan */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2.3); /* Centre et agrandit */
+}
 
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
